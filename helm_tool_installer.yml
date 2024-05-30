@@ -1,0 +1,12 @@
+# Helm tool installer v1
+# Install Helm on an agent machine.
+
+
+parameters:
+- name: 'helmVersionToInstall'
+  type: string    
+  default: 'latest'
+
+- task: HelmInstaller@1
+  inputs:
+    helmVersionToInstall: '${{parameters.helmVersionToInstall}'
